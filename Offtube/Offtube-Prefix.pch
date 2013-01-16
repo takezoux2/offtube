@@ -1,0 +1,18 @@
+//
+// Prefix header for all source files of the 'Offtube' target in the 'Offtube' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#import "Misc.h"
+
+#define Logging(fmt,...) NSLog(fmt,__VA_ARGS__)
