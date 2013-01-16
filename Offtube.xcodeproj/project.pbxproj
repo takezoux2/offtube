@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14AB70D716A68E500038A48B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB70D616A68E500038A48B /* UIKit.framework */; };
+		14AB70D916A68E500038A48B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB70D816A68E500038A48B /* Foundation.framework */; };
+		14AB70DB16A68E500038A48B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB70DA16A68E500038A48B /* CoreGraphics.framework */; };
+		14AB70E116A68E500038A48B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14AB70DF16A68E500038A48B /* InfoPlist.strings */; };
+		14AB70E316A68E500038A48B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB70E216A68E500038A48B /* main.m */; };
+		14AB70E716A68E500038A48B /* TK2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB70E616A68E500038A48B /* TK2AppDelegate.m */; };
+		14AB70E916A68E500038A48B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 14AB70E816A68E500038A48B /* Default.png */; };
+		14AB70EB16A68E500038A48B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14AB70EA16A68E500038A48B /* Default@2x.png */; };
+		14AB70ED16A68E500038A48B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14AB70EC16A68E500038A48B /* Default-568h@2x.png */; };
+		14AB70F016A68E500038A48B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AB70EE16A68E500038A48B /* MainStoryboard.storyboard */; };
+		14AB70F316A68E500038A48B /* TK2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB70F216A68E500038A48B /* TK2ViewController.m */; };
+		14AB70FB16A68E500038A48B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB70FA16A68E500038A48B /* SenTestingKit.framework */; };
+		14AB70FC16A68E500038A48B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB70D616A68E500038A48B /* UIKit.framework */; };
+		14AB70FD16A68E500038A48B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB70D816A68E500038A48B /* Foundation.framework */; };
+		14AB710516A68E500038A48B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14AB710316A68E500038A48B /* InfoPlist.strings */; };
+		14AB710816A68E500038A48B /* OfftubeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB710716A68E500038A48B /* OfftubeTests.m */; };
+		14AB712516A69B620038A48B /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB712416A69B620038A48B /* SearchResultTableViewController.m */; };
+		14AB716E16A69BF70038A48B /* ANMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB712F16A69BF70038A48B /* ANMovie.m */; };
+		14AB716F16A69BF70038A48B /* ANFullAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB713216A69BF70038A48B /* ANFullAtom.m */; };
+		14AB717016A69BF70038A48B /* ANMovieAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB713416A69BF70038A48B /* ANMovieAtom.m */; };
+		14AB717116A69BF70038A48B /* ANMovieAtomGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB713616A69BF70038A48B /* ANMovieAtomGroup.m */; };
+		14AB717216A69BF70038A48B /* ANQTAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB713916A69BF70038A48B /* ANQTAtom.m */; };
+		14AB717316A69BF70038A48B /* ANQTAtomContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB713B16A69BF70038A48B /* ANQTAtomContainer.m */; };
+		14AB717416A69BF70038A48B /* ANDataHandlerReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB713E16A69BF70038A48B /* ANDataHandlerReference.m */; };
+		14AB717516A69BF70038A48B /* ANTrackAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714016A69BF70038A48B /* ANTrackAtom.m */; };
+		14AB717616A69BF70038A48B /* ANTrackHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714216A69BF70038A48B /* ANTrackHeader.m */; };
+		14AB717716A69BF70038A48B /* ANChunkOffset64Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714516A69BF70038A48B /* ANChunkOffset64Atom.m */; };
+		14AB717816A69BF70038A48B /* ANChunkOffsetAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714716A69BF70038A48B /* ANChunkOffsetAtom.m */; };
+		14AB717916A69BF70038A48B /* ANSampleDescriptionAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714916A69BF70038A48B /* ANSampleDescriptionAtom.m */; };
+		14AB717A16A69BF70038A48B /* ANSampleSizeAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714B16A69BF70038A48B /* ANSampleSizeAtom.m */; };
+		14AB717B16A69BF70038A48B /* ANSampleTableAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714D16A69BF70038A48B /* ANSampleTableAtom.m */; };
+		14AB717C16A69BF70038A48B /* ANSampleToChunkAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB714F16A69BF70038A48B /* ANSampleToChunkAtom.m */; };
+		14AB717D16A69BF70038A48B /* ANSampleToChunkEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB715116A69BF70038A48B /* ANSampleToChunkEntry.m */; };
+		14AB717E16A69BF70038A48B /* ANMP4ASampleDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB715416A69BF70038A48B /* ANMP4ASampleDescription.m */; };
+		14AB717F16A69BF70038A48B /* ANSampleDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB715616A69BF70038A48B /* ANSampleDescription.m */; };
+		14AB718016A69BF70038A48B /* ANEncodingAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB715916A69BF70038A48B /* ANEncodingAtom.m */; };
+		14AB718116A69BF70038A48B /* ANEncodingAtomGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB715B16A69BF70038A48B /* ANEncodingAtomGroup.m */; };
+		14AB718216A69BF70038A48B /* ANEncodingFullAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB715D16A69BF70038A48B /* ANEncodingFullAtom.m */; };
+		14AB718316A69BF70038A48B /* ANEncodingFullAtomGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB715F16A69BF70038A48B /* ANEncodingFullAtomGroup.m */; };
+		14AB718416A69BF70038A48B /* ANMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB716216A69BF70038A48B /* ANMetadata.m */; };
+		14AB718516A69BF70038A48B /* ANMetadataImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB716416A69BF70038A48B /* ANMetadataImage.m */; };
+		14AB718616A69BF70038A48B /* ANMetadataTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB716616A69BF70038A48B /* ANMetadataTrack.m */; };
+		14AB718716A69BF70038A48B /* ANAtomReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB716916A69BF70038A48B /* ANAtomReader.m */; };
+		14AB718816A69BF70038A48B /* ANMovieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB716B16A69BF70038A48B /* ANMovieStore.m */; };
+		14AB718916A69BF70038A48B /* ANMovieStoreFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB716D16A69BF70038A48B /* ANMovieStoreFile.m */; };
+		14AB718B16A69E150038A48B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB718A16A69E150038A48B /* AudioToolbox.framework */; };
+		14AB718D16A69E1C0038A48B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB718C16A69E1C0038A48B /* CoreAudio.framework */; };
+		14AB719116A6BD400038A48B /* VideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB719016A6BD400038A48B /* VideoData.m */; };
+		14AB719416A6FF400038A48B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB719316A6FF400038A48B /* DetailViewController.m */; };
+		994FC35F06824720B48FA08F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C19694619DA9458EABC2D244 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14AB70FE16A68E500038A48B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14AB70C916A68E500038A48B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14AB70D116A68E500038A48B;
+			remoteInfo = Offtube;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14AB70D216A68E500038A48B /* Offtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Offtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AB70D616A68E500038A48B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		14AB70D816A68E500038A48B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		14AB70DA16A68E500038A48B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14AB70DE16A68E500038A48B /* Offtube-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Offtube-Info.plist"; sourceTree = "<group>"; };
+		14AB70E016A68E500038A48B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14AB70E216A68E500038A48B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14AB70E416A68E500038A48B /* Offtube-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Offtube-Prefix.pch"; sourceTree = "<group>"; };
+		14AB70E516A68E500038A48B /* TK2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TK2AppDelegate.h; sourceTree = "<group>"; };
+		14AB70E616A68E500038A48B /* TK2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TK2AppDelegate.m; sourceTree = "<group>"; };
+		14AB70E816A68E500038A48B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		14AB70EA16A68E500038A48B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		14AB70EC16A68E500038A48B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		14AB70EF16A68E500038A48B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		14AB70F116A68E500038A48B /* TK2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TK2ViewController.h; sourceTree = "<group>"; };
+		14AB70F216A68E500038A48B /* TK2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TK2ViewController.m; sourceTree = "<group>"; };
+		14AB70F916A68E500038A48B /* OfftubeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfftubeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AB70FA16A68E500038A48B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		14AB710216A68E500038A48B /* OfftubeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OfftubeTests-Info.plist"; sourceTree = "<group>"; };
+		14AB710416A68E500038A48B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14AB710616A68E500038A48B /* OfftubeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfftubeTests.h; sourceTree = "<group>"; };
+		14AB710716A68E500038A48B /* OfftubeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfftubeTests.m; sourceTree = "<group>"; };
+		14AB712316A69B620038A48B /* SearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultTableViewController.h; path = Search/SearchResultTableViewController.h; sourceTree = "<group>"; };
+		14AB712416A69B620038A48B /* SearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultTableViewController.m; path = Search/SearchResultTableViewController.m; sourceTree = "<group>"; };
+		14AB712E16A69BF70038A48B /* ANMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMovie.h; sourceTree = "<group>"; };
+		14AB712F16A69BF70038A48B /* ANMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMovie.m; sourceTree = "<group>"; };
+		14AB713116A69BF70038A48B /* ANFullAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANFullAtom.h; sourceTree = "<group>"; };
+		14AB713216A69BF70038A48B /* ANFullAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANFullAtom.m; sourceTree = "<group>"; };
+		14AB713316A69BF70038A48B /* ANMovieAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMovieAtom.h; sourceTree = "<group>"; };
+		14AB713416A69BF70038A48B /* ANMovieAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMovieAtom.m; sourceTree = "<group>"; };
+		14AB713516A69BF70038A48B /* ANMovieAtomGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMovieAtomGroup.h; sourceTree = "<group>"; };
+		14AB713616A69BF70038A48B /* ANMovieAtomGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMovieAtomGroup.m; sourceTree = "<group>"; };
+		14AB713816A69BF70038A48B /* ANQTAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANQTAtom.h; sourceTree = "<group>"; };
+		14AB713916A69BF70038A48B /* ANQTAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANQTAtom.m; sourceTree = "<group>"; };
+		14AB713A16A69BF70038A48B /* ANQTAtomContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANQTAtomContainer.h; sourceTree = "<group>"; };
+		14AB713B16A69BF70038A48B /* ANQTAtomContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANQTAtomContainer.m; sourceTree = "<group>"; };
+		14AB713D16A69BF70038A48B /* ANDataHandlerReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANDataHandlerReference.h; sourceTree = "<group>"; };
+		14AB713E16A69BF70038A48B /* ANDataHandlerReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANDataHandlerReference.m; sourceTree = "<group>"; };
+		14AB713F16A69BF70038A48B /* ANTrackAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTrackAtom.h; sourceTree = "<group>"; };
+		14AB714016A69BF70038A48B /* ANTrackAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTrackAtom.m; sourceTree = "<group>"; };
+		14AB714116A69BF70038A48B /* ANTrackHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTrackHeader.h; sourceTree = "<group>"; };
+		14AB714216A69BF70038A48B /* ANTrackHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTrackHeader.m; sourceTree = "<group>"; };
+		14AB714416A69BF70038A48B /* ANChunkOffset64Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANChunkOffset64Atom.h; sourceTree = "<group>"; };
+		14AB714516A69BF70038A48B /* ANChunkOffset64Atom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANChunkOffset64Atom.m; sourceTree = "<group>"; };
+		14AB714616A69BF70038A48B /* ANChunkOffsetAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANChunkOffsetAtom.h; sourceTree = "<group>"; };
+		14AB714716A69BF70038A48B /* ANChunkOffsetAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANChunkOffsetAtom.m; sourceTree = "<group>"; };
+		14AB714816A69BF70038A48B /* ANSampleDescriptionAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleDescriptionAtom.h; sourceTree = "<group>"; };
+		14AB714916A69BF70038A48B /* ANSampleDescriptionAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSampleDescriptionAtom.m; sourceTree = "<group>"; };
+		14AB714A16A69BF70038A48B /* ANSampleSizeAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleSizeAtom.h; sourceTree = "<group>"; };
+		14AB714B16A69BF70038A48B /* ANSampleSizeAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSampleSizeAtom.m; sourceTree = "<group>"; };
+		14AB714C16A69BF70038A48B /* ANSampleTableAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleTableAtom.h; sourceTree = "<group>"; };
+		14AB714D16A69BF70038A48B /* ANSampleTableAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSampleTableAtom.m; sourceTree = "<group>"; };
+		14AB714E16A69BF70038A48B /* ANSampleToChunkAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleToChunkAtom.h; sourceTree = "<group>"; };
+		14AB714F16A69BF70038A48B /* ANSampleToChunkAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSampleToChunkAtom.m; sourceTree = "<group>"; };
+		14AB715016A69BF70038A48B /* ANSampleToChunkEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleToChunkEntry.h; sourceTree = "<group>"; };
+		14AB715116A69BF70038A48B /* ANSampleToChunkEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSampleToChunkEntry.m; sourceTree = "<group>"; };
+		14AB715316A69BF70038A48B /* ANMP4ASampleDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMP4ASampleDescription.h; sourceTree = "<group>"; };
+		14AB715416A69BF70038A48B /* ANMP4ASampleDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMP4ASampleDescription.m; sourceTree = "<group>"; };
+		14AB715516A69BF70038A48B /* ANSampleDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleDescription.h; sourceTree = "<group>"; };
+		14AB715616A69BF70038A48B /* ANSampleDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSampleDescription.m; sourceTree = "<group>"; };
+		14AB715816A69BF70038A48B /* ANEncodingAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANEncodingAtom.h; sourceTree = "<group>"; };
+		14AB715916A69BF70038A48B /* ANEncodingAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANEncodingAtom.m; sourceTree = "<group>"; };
+		14AB715A16A69BF70038A48B /* ANEncodingAtomGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANEncodingAtomGroup.h; sourceTree = "<group>"; };
+		14AB715B16A69BF70038A48B /* ANEncodingAtomGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANEncodingAtomGroup.m; sourceTree = "<group>"; };
+		14AB715C16A69BF70038A48B /* ANEncodingFullAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANEncodingFullAtom.h; sourceTree = "<group>"; };
+		14AB715D16A69BF70038A48B /* ANEncodingFullAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANEncodingFullAtom.m; sourceTree = "<group>"; };
+		14AB715E16A69BF70038A48B /* ANEncodingFullAtomGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANEncodingFullAtomGroup.h; sourceTree = "<group>"; };
+		14AB715F16A69BF70038A48B /* ANEncodingFullAtomGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANEncodingFullAtomGroup.m; sourceTree = "<group>"; };
+		14AB716116A69BF70038A48B /* ANMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMetadata.h; sourceTree = "<group>"; };
+		14AB716216A69BF70038A48B /* ANMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMetadata.m; sourceTree = "<group>"; };
+		14AB716316A69BF70038A48B /* ANMetadataImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMetadataImage.h; sourceTree = "<group>"; };
+		14AB716416A69BF70038A48B /* ANMetadataImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMetadataImage.m; sourceTree = "<group>"; };
+		14AB716516A69BF70038A48B /* ANMetadataTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMetadataTrack.h; sourceTree = "<group>"; };
+		14AB716616A69BF70038A48B /* ANMetadataTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMetadataTrack.m; sourceTree = "<group>"; };
+		14AB716816A69BF70038A48B /* ANAtomReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANAtomReader.h; sourceTree = "<group>"; };
+		14AB716916A69BF70038A48B /* ANAtomReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANAtomReader.m; sourceTree = "<group>"; };
+		14AB716A16A69BF70038A48B /* ANMovieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMovieStore.h; sourceTree = "<group>"; };
+		14AB716B16A69BF70038A48B /* ANMovieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMovieStore.m; sourceTree = "<group>"; };
+		14AB716C16A69BF70038A48B /* ANMovieStoreFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANMovieStoreFile.h; sourceTree = "<group>"; };
+		14AB716D16A69BF70038A48B /* ANMovieStoreFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANMovieStoreFile.m; sourceTree = "<group>"; };
+		14AB718A16A69E150038A48B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		14AB718C16A69E1C0038A48B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		14AB718E16A6A0CC0038A48B /* Misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
+		14AB718F16A6BD400038A48B /* VideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoData.h; path = Search/VideoData.h; sourceTree = "<group>"; };
+		14AB719016A6BD400038A48B /* VideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoData.m; path = Search/VideoData.m; sourceTree = "<group>"; };
+		14AB719216A6FF400038A48B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Search/DetailViewController.h; sourceTree = "<group>"; };
+		14AB719316A6FF400038A48B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Search/DetailViewController.m; sourceTree = "<group>"; };
+		C19694619DA9458EABC2D244 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97E2C07DE584565A6EAA8FB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14AB70CF16A68E500038A48B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB718D16A69E1C0038A48B /* CoreAudio.framework in Frameworks */,
+				14AB718B16A69E150038A48B /* AudioToolbox.framework in Frameworks */,
+				14AB70D716A68E500038A48B /* UIKit.framework in Frameworks */,
+				14AB70D916A68E500038A48B /* Foundation.framework in Frameworks */,
+				14AB70DB16A68E500038A48B /* CoreGraphics.framework in Frameworks */,
+				994FC35F06824720B48FA08F /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14AB70F516A68E500038A48B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB70FB16A68E500038A48B /* SenTestingKit.framework in Frameworks */,
+				14AB70FC16A68E500038A48B /* UIKit.framework in Frameworks */,
+				14AB70FD16A68E500038A48B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14AB70C716A68E500038A48B = {
+			isa = PBXGroup;
+			children = (
+				14AB718C16A69E1C0038A48B /* CoreAudio.framework */,
+				14AB718A16A69E150038A48B /* AudioToolbox.framework */,
+				14AB70DC16A68E500038A48B /* Offtube */,
+				14AB710016A68E500038A48B /* OfftubeTests */,
+				14AB70D516A68E500038A48B /* Frameworks */,
+				14AB70D316A68E500038A48B /* Products */,
+				C97E2C07DE584565A6EAA8FB /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		14AB70D316A68E500038A48B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14AB70D216A68E500038A48B /* Offtube.app */,
+				14AB70F916A68E500038A48B /* OfftubeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14AB70D516A68E500038A48B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14AB70D616A68E500038A48B /* UIKit.framework */,
+				14AB70D816A68E500038A48B /* Foundation.framework */,
+				14AB70DA16A68E500038A48B /* CoreGraphics.framework */,
+				14AB70FA16A68E500038A48B /* SenTestingKit.framework */,
+				C19694619DA9458EABC2D244 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14AB70DC16A68E500038A48B /* Offtube */ = {
+			isa = PBXGroup;
+			children = (
+				14AB712D16A69BF70038A48B /* ANMovie */,
+				14AB712116A69B290038A48B /* Search */,
+				14AB70E516A68E500038A48B /* TK2AppDelegate.h */,
+				14AB70E616A68E500038A48B /* TK2AppDelegate.m */,
+				14AB70EE16A68E500038A48B /* MainStoryboard.storyboard */,
+				14AB70F116A68E500038A48B /* TK2ViewController.h */,
+				14AB70F216A68E500038A48B /* TK2ViewController.m */,
+				14AB70DD16A68E500038A48B /* Supporting Files */,
+				14AB718E16A6A0CC0038A48B /* Misc.h */,
+			);
+			path = Offtube;
+			sourceTree = "<group>";
+		};
+		14AB70DD16A68E500038A48B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14AB70DE16A68E500038A48B /* Offtube-Info.plist */,
+				14AB70DF16A68E500038A48B /* InfoPlist.strings */,
+				14AB70E216A68E500038A48B /* main.m */,
+				14AB70E416A68E500038A48B /* Offtube-Prefix.pch */,
+				14AB70E816A68E500038A48B /* Default.png */,
+				14AB70EA16A68E500038A48B /* Default@2x.png */,
+				14AB70EC16A68E500038A48B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14AB710016A68E500038A48B /* OfftubeTests */ = {
+			isa = PBXGroup;
+			children = (
+				14AB710616A68E500038A48B /* OfftubeTests.h */,
+				14AB710716A68E500038A48B /* OfftubeTests.m */,
+				14AB710116A68E500038A48B /* Supporting Files */,
+			);
+			path = OfftubeTests;
+			sourceTree = "<group>";
+		};
+		14AB710116A68E500038A48B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14AB710216A68E500038A48B /* OfftubeTests-Info.plist */,
+				14AB710316A68E500038A48B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14AB712116A69B290038A48B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				14AB712316A69B620038A48B /* SearchResultTableViewController.h */,
+				14AB712416A69B620038A48B /* SearchResultTableViewController.m */,
+				14AB718F16A6BD400038A48B /* VideoData.h */,
+				14AB719016A6BD400038A48B /* VideoData.m */,
+				14AB719216A6FF400038A48B /* DetailViewController.h */,
+				14AB719316A6FF400038A48B /* DetailViewController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		14AB712D16A69BF70038A48B /* ANMovie */ = {
+			isa = PBXGroup;
+			children = (
+				14AB712E16A69BF70038A48B /* ANMovie.h */,
+				14AB712F16A69BF70038A48B /* ANMovie.m */,
+				14AB713016A69BF70038A48B /* Atoms */,
+				14AB715716A69BF70038A48B /* Encoding */,
+				14AB716016A69BF70038A48B /* Metadata */,
+				14AB716716A69BF70038A48B /* Streams */,
+			);
+			path = ANMovie;
+			sourceTree = "<group>";
+		};
+		14AB713016A69BF70038A48B /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				14AB713116A69BF70038A48B /* ANFullAtom.h */,
+				14AB713216A69BF70038A48B /* ANFullAtom.m */,
+				14AB713316A69BF70038A48B /* ANMovieAtom.h */,
+				14AB713416A69BF70038A48B /* ANMovieAtom.m */,
+				14AB713516A69BF70038A48B /* ANMovieAtomGroup.h */,
+				14AB713616A69BF70038A48B /* ANMovieAtomGroup.m */,
+				14AB713716A69BF70038A48B /* QT */,
+				14AB713C16A69BF70038A48B /* Specific */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		14AB713716A69BF70038A48B /* QT */ = {
+			isa = PBXGroup;
+			children = (
+				14AB713816A69BF70038A48B /* ANQTAtom.h */,
+				14AB713916A69BF70038A48B /* ANQTAtom.m */,
+				14AB713A16A69BF70038A48B /* ANQTAtomContainer.h */,
+				14AB713B16A69BF70038A48B /* ANQTAtomContainer.m */,
+			);
+			path = QT;
+			sourceTree = "<group>";
+		};
+		14AB713C16A69BF70038A48B /* Specific */ = {
+			isa = PBXGroup;
+			children = (
+				14AB713D16A69BF70038A48B /* ANDataHandlerReference.h */,
+				14AB713E16A69BF70038A48B /* ANDataHandlerReference.m */,
+				14AB713F16A69BF70038A48B /* ANTrackAtom.h */,
+				14AB714016A69BF70038A48B /* ANTrackAtom.m */,
+				14AB714116A69BF70038A48B /* ANTrackHeader.h */,
+				14AB714216A69BF70038A48B /* ANTrackHeader.m */,
+				14AB714316A69BF70038A48B /* Sample Table */,
+			);
+			path = Specific;
+			sourceTree = "<group>";
+		};
+		14AB714316A69BF70038A48B /* Sample Table */ = {
+			isa = PBXGroup;
+			children = (
+				14AB714416A69BF70038A48B /* ANChunkOffset64Atom.h */,
+				14AB714516A69BF70038A48B /* ANChunkOffset64Atom.m */,
+				14AB714616A69BF70038A48B /* ANChunkOffsetAtom.h */,
+				14AB714716A69BF70038A48B /* ANChunkOffsetAtom.m */,
+				14AB714816A69BF70038A48B /* ANSampleDescriptionAtom.h */,
+				14AB714916A69BF70038A48B /* ANSampleDescriptionAtom.m */,
+				14AB714A16A69BF70038A48B /* ANSampleSizeAtom.h */,
+				14AB714B16A69BF70038A48B /* ANSampleSizeAtom.m */,
+				14AB714C16A69BF70038A48B /* ANSampleTableAtom.h */,
+				14AB714D16A69BF70038A48B /* ANSampleTableAtom.m */,
+				14AB714E16A69BF70038A48B /* ANSampleToChunkAtom.h */,
+				14AB714F16A69BF70038A48B /* ANSampleToChunkAtom.m */,
+				14AB715016A69BF70038A48B /* ANSampleToChunkEntry.h */,
+				14AB715116A69BF70038A48B /* ANSampleToChunkEntry.m */,
+				14AB715216A69BF70038A48B /* Sample Descriptions */,
+			);
+			path = "Sample Table";
+			sourceTree = "<group>";
+		};
+		14AB715216A69BF70038A48B /* Sample Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				14AB715316A69BF70038A48B /* ANMP4ASampleDescription.h */,
+				14AB715416A69BF70038A48B /* ANMP4ASampleDescription.m */,
+				14AB715516A69BF70038A48B /* ANSampleDescription.h */,
+				14AB715616A69BF70038A48B /* ANSampleDescription.m */,
+			);
+			path = "Sample Descriptions";
+			sourceTree = "<group>";
+		};
+		14AB715716A69BF70038A48B /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				14AB715816A69BF70038A48B /* ANEncodingAtom.h */,
+				14AB715916A69BF70038A48B /* ANEncodingAtom.m */,
+				14AB715A16A69BF70038A48B /* ANEncodingAtomGroup.h */,
+				14AB715B16A69BF70038A48B /* ANEncodingAtomGroup.m */,
+				14AB715C16A69BF70038A48B /* ANEncodingFullAtom.h */,
+				14AB715D16A69BF70038A48B /* ANEncodingFullAtom.m */,
+				14AB715E16A69BF70038A48B /* ANEncodingFullAtomGroup.h */,
+				14AB715F16A69BF70038A48B /* ANEncodingFullAtomGroup.m */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		14AB716016A69BF70038A48B /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				14AB716116A69BF70038A48B /* ANMetadata.h */,
+				14AB716216A69BF70038A48B /* ANMetadata.m */,
+				14AB716316A69BF70038A48B /* ANMetadataImage.h */,
+				14AB716416A69BF70038A48B /* ANMetadataImage.m */,
+				14AB716516A69BF70038A48B /* ANMetadataTrack.h */,
+				14AB716616A69BF70038A48B /* ANMetadataTrack.m */,
+			);
+			path = Metadata;
+			sourceTree = "<group>";
+		};
+		14AB716716A69BF70038A48B /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				14AB716816A69BF70038A48B /* ANAtomReader.h */,
+				14AB716916A69BF70038A48B /* ANAtomReader.m */,
+				14AB716A16A69BF70038A48B /* ANMovieStore.h */,
+				14AB716B16A69BF70038A48B /* ANMovieStore.m */,
+				14AB716C16A69BF70038A48B /* ANMovieStoreFile.h */,
+				14AB716D16A69BF70038A48B /* ANMovieStoreFile.m */,
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14AB70D116A68E500038A48B /* Offtube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14AB710B16A68E500038A48B /* Build configuration list for PBXNativeTarget "Offtube" */;
+			buildPhases = (
+				14AB70CE16A68E500038A48B /* Sources */,
+				14AB70CF16A68E500038A48B /* Frameworks */,
+				14AB70D016A68E500038A48B /* Resources */,
+				1697BD2452F9452E80AD97B9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Offtube;
+			productName = Offtube;
+			productReference = 14AB70D216A68E500038A48B /* Offtube.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14AB70F816A68E500038A48B /* OfftubeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14AB710E16A68E500038A48B /* Build configuration list for PBXNativeTarget "OfftubeTests" */;
+			buildPhases = (
+				14AB70F416A68E500038A48B /* Sources */,
+				14AB70F516A68E500038A48B /* Frameworks */,
+				14AB70F616A68E500038A48B /* Resources */,
+				14AB70F716A68E500038A48B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14AB70FF16A68E500038A48B /* PBXTargetDependency */,
+			);
+			name = OfftubeTests;
+			productName = OfftubeTests;
+			productReference = 14AB70F916A68E500038A48B /* OfftubeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14AB70C916A68E500038A48B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TK2;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Takezoux2;
+			};
+			buildConfigurationList = 14AB70CC16A68E500038A48B /* Build configuration list for PBXProject "Offtube" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 14AB70C716A68E500038A48B;
+			productRefGroup = 14AB70D316A68E500038A48B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14AB70D116A68E500038A48B /* Offtube */,
+				14AB70F816A68E500038A48B /* OfftubeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14AB70D016A68E500038A48B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB70E116A68E500038A48B /* InfoPlist.strings in Resources */,
+				14AB70E916A68E500038A48B /* Default.png in Resources */,
+				14AB70EB16A68E500038A48B /* Default@2x.png in Resources */,
+				14AB70ED16A68E500038A48B /* Default-568h@2x.png in Resources */,
+				14AB70F016A68E500038A48B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14AB70F616A68E500038A48B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB710516A68E500038A48B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14AB70F716A68E500038A48B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		1697BD2452F9452E80AD97B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14AB70CE16A68E500038A48B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB70E316A68E500038A48B /* main.m in Sources */,
+				14AB70E716A68E500038A48B /* TK2AppDelegate.m in Sources */,
+				14AB70F316A68E500038A48B /* TK2ViewController.m in Sources */,
+				14AB712516A69B620038A48B /* SearchResultTableViewController.m in Sources */,
+				14AB716E16A69BF70038A48B /* ANMovie.m in Sources */,
+				14AB716F16A69BF70038A48B /* ANFullAtom.m in Sources */,
+				14AB717016A69BF70038A48B /* ANMovieAtom.m in Sources */,
+				14AB717116A69BF70038A48B /* ANMovieAtomGroup.m in Sources */,
+				14AB717216A69BF70038A48B /* ANQTAtom.m in Sources */,
+				14AB717316A69BF70038A48B /* ANQTAtomContainer.m in Sources */,
+				14AB717416A69BF70038A48B /* ANDataHandlerReference.m in Sources */,
+				14AB717516A69BF70038A48B /* ANTrackAtom.m in Sources */,
+				14AB717616A69BF70038A48B /* ANTrackHeader.m in Sources */,
+				14AB717716A69BF70038A48B /* ANChunkOffset64Atom.m in Sources */,
+				14AB717816A69BF70038A48B /* ANChunkOffsetAtom.m in Sources */,
+				14AB717916A69BF70038A48B /* ANSampleDescriptionAtom.m in Sources */,
+				14AB717A16A69BF70038A48B /* ANSampleSizeAtom.m in Sources */,
+				14AB717B16A69BF70038A48B /* ANSampleTableAtom.m in Sources */,
+				14AB717C16A69BF70038A48B /* ANSampleToChunkAtom.m in Sources */,
+				14AB717D16A69BF70038A48B /* ANSampleToChunkEntry.m in Sources */,
+				14AB717E16A69BF70038A48B /* ANMP4ASampleDescription.m in Sources */,
+				14AB717F16A69BF70038A48B /* ANSampleDescription.m in Sources */,
+				14AB718016A69BF70038A48B /* ANEncodingAtom.m in Sources */,
+				14AB718116A69BF70038A48B /* ANEncodingAtomGroup.m in Sources */,
+				14AB718216A69BF70038A48B /* ANEncodingFullAtom.m in Sources */,
+				14AB718316A69BF70038A48B /* ANEncodingFullAtomGroup.m in Sources */,
+				14AB718416A69BF70038A48B /* ANMetadata.m in Sources */,
+				14AB718516A69BF70038A48B /* ANMetadataImage.m in Sources */,
+				14AB718616A69BF70038A48B /* ANMetadataTrack.m in Sources */,
+				14AB718716A69BF70038A48B /* ANAtomReader.m in Sources */,
+				14AB718816A69BF70038A48B /* ANMovieStore.m in Sources */,
+				14AB718916A69BF70038A48B /* ANMovieStoreFile.m in Sources */,
+				14AB719116A6BD400038A48B /* VideoData.m in Sources */,
+				14AB719416A6FF400038A48B /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14AB70F416A68E500038A48B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AB710816A68E500038A48B /* OfftubeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14AB70FF16A68E500038A48B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14AB70D116A68E500038A48B /* Offtube */;
+			targetProxy = 14AB70FE16A68E500038A48B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14AB70DF16A68E500038A48B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14AB70E016A68E500038A48B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		14AB70EE16A68E500038A48B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14AB70EF16A68E500038A48B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		14AB710316A68E500038A48B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14AB710416A68E500038A48B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14AB710916A68E500038A48B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		14AB710A16A68E500038A48B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14AB710C16A68E500038A48B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97E2C07DE584565A6EAA8FB /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Offtube/Offtube-Prefix.pch";
+				INFOPLIST_FILE = "Offtube/Offtube-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		14AB710D16A68E500038A48B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97E2C07DE584565A6EAA8FB /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Offtube/Offtube-Prefix.pch";
+				INFOPLIST_FILE = "Offtube/Offtube-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		14AB710F16A68E500038A48B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Offtube.app/Offtube";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Offtube/Offtube-Prefix.pch";
+				INFOPLIST_FILE = "OfftubeTests/OfftubeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		14AB711016A68E500038A48B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Offtube.app/Offtube";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Offtube/Offtube-Prefix.pch";
+				INFOPLIST_FILE = "OfftubeTests/OfftubeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14AB70CC16A68E500038A48B /* Build configuration list for PBXProject "Offtube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AB710916A68E500038A48B /* Debug */,
+				14AB710A16A68E500038A48B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14AB710B16A68E500038A48B /* Build configuration list for PBXNativeTarget "Offtube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AB710C16A68E500038A48B /* Debug */,
+				14AB710D16A68E500038A48B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14AB710E16A68E500038A48B /* Build configuration list for PBXNativeTarget "OfftubeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14AB710F16A68E500038A48B /* Debug */,
+				14AB711016A68E500038A48B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14AB70C916A68E500038A48B /* Project object */;
+}
