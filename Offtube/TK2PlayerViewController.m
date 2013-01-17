@@ -22,6 +22,7 @@ static NSString * secToString(Float64 sec){
 @implementation TK2PlayerViewController{
     VideoData *data;
     UIView *glayCover;
+    UIProgressView *progressBar;
     TK2AVPlayerView *playerView;
     
     __weak IBOutlet UISlider *playTimeSlider;
@@ -64,18 +65,26 @@ static NSString * secToString(Float64 sec){
     label.text = @"Caching";
     [glayCover addSubview:label];
     
+    progressBar = [[UIProgressView alloc] initWithFrame:CGRectMake(width * 0.1, 185, width * 0.8, 30)];
+    [glayCover addSubview:progressBar];
+    
+    
 }
 
 - (void)uncover{
     [glayCover removeFromSuperview];
     glayCover = nil;
+    progressBar = nil;
 }
 
 - (void)loadData:(VideoData *)_data{
     Downloader *downloader = [Downloader sharedInstance];
     
     if(onlySound){
-        [downloader downloadSound:_data complete:^(NSURL *soundFile) {
+        [downloader downloadSound:_data progress:^(CGFloat percent) {
+            Logging(@"Percent = %f",percent);
+            progressBar.progress = percent;
+        } complete:^(NSURL *soundFile) {
             [playerView loadVideo:soundFile];
             
             playTimeSlider.minimumValue = 0;
@@ -105,7 +114,10 @@ static NSString * secToString(Float64 sec){
         }];
         [self.view addSubview:onlySoundLabel];
     }else{
-        [downloader downloadVideo:_data complete:^(NSURL *videoFile) {
+        [downloader downloadVideo:_data progress:^(CGFloat percent) {
+            Logging(@"Percent = %f",percent);
+            progressBar.progress = percent;
+        } complete:^(NSURL *videoFile) {
             [playerView loadVideo:videoFile];
             
             playTimeSlider.minimumValue = 0;
@@ -160,6 +172,7 @@ static NSString * secToString(Float64 sec){
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     [playerView pause];
+    [[Downloader sharedInstance] cancel];
 }
 
 - (void)didReceiveMemoryWarning

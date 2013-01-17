@@ -13,6 +13,7 @@
 
 @implementation Downloader{
     NSString *lastDownloadedVideoId;
+    AFHTTPRequestOperation *operation;
 }
 
 static Downloader * _sharedInstance = nil;
@@ -22,6 +23,7 @@ static Downloader * _sharedInstance = nil;
     self = [super init];
     if (self) {
         lastDownloadedVideoId = nil;
+        operation = nil;
     }
     return self;
 }
@@ -59,7 +61,14 @@ static Downloader * _sharedInstance = nil;
     return [@"http://www.youtube.com/watch?v=" stringByAppendingString:data.videoId];
 }
 
-- (void)downloadVideo:(VideoData *)data complete:(void(^)(NSURL *videoFile))onComplete fail:(void(^)(DownloadError error))onFail
+- (void)cancel{
+    if(operation){
+        [operation cancel];
+        operation = nil;
+    }
+}
+
+- (void)downloadVideo:(VideoData *)data progress:(void(^)(CGFloat percent))onProgress complete:(void(^)(NSURL *videoFile))onComplete fail:(void(^)(DownloadError error))onFail
 {
     
     NSString *videoFilename = [self filePath:@"cache.mp4"];
@@ -83,7 +92,6 @@ static Downloader * _sharedInstance = nil;
     
     NSDictionary *videos = [HCYoutubeParser h264videosWithYoutubeURL:[NSURL URLWithString:[self getPageURL:data]]];
     
-    
     NSURL *url = [NSURL URLWithString:[videos objectForKey:@"medium"]];
     if(url == nil){
         url = [[videos objectEnumerator] nextObject];
@@ -94,10 +102,19 @@ static Downloader * _sharedInstance = nil;
         return;
     }
     
+    if(operation){
+        [operation cancel];
+        operation = nil;
+    }
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:filePath.path append:NO];
+    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+        onProgress( (CGFloat)totalBytesRead / (CGFloat)totalBytesExpectedToRead);
+    }];
+    
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         Logging(@"Success to download %@",url);
         
@@ -110,11 +127,14 @@ static Downloader * _sharedInstance = nil;
     }];
     Logging(@"Begin download file %@",url);
     [operation start];
+    
 }
 
-- (void)downloadSound:(VideoData *)data complete:(void(^)(NSURL *soundFile))onComplete fail:(void(^)(DownloadError error))onFail
+- (void)downloadSound:(VideoData *)data progress:(void(^)(CGFloat percent))onProgress complete:(void(^)(NSURL *soundFile))onComplete fail:(void(^)(DownloadError error))onFail
 {
-    [self downloadVideo:data complete:^(NSURL *videoFile) {
+    [self downloadVideo:data progress:^(CGFloat percent) {
+        onProgress(percent);
+    } complete:^(NSURL *videoFile) {
         ANMovie *movie = [[ANMovie alloc] initWithFile:videoFile.path];
         NSString *soundFilename = [self filePath:@"cache.aac"];
         

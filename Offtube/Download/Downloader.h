@@ -18,9 +18,15 @@ typedef enum{
 
 + (Downloader *)sharedInstance;
 
-
+- (void)cancel;
 - (NSString *)getPageURL:(VideoData *)data;
-- (void)downloadVideo:(VideoData *)data complete:(void(^)(NSURL *videoFile))onComplete fail:(void(^)(DownloadError error))onFail;
-- (void)downloadSound:(VideoData *)data complete:(void(^)(NSURL *soundFile))onComplete fail:(void(^)(DownloadError error))onFail;
+- (void)downloadVideo:(VideoData *)data
+             progress:(void(^)(CGFloat percent))onProgress
+             complete:(void(^)(NSURL *videoFile))onComplete
+             fail:(void(^)(DownloadError error))onFail;
+- (void)downloadSound:(VideoData *)data
+             progress:(void(^)(CGFloat percent))onProgress
+             complete:(void(^)(NSURL *soundFile))onComplete
+             fail:(void(^)(DownloadError error))onFail;
 
 @end
