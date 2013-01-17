@@ -14,12 +14,14 @@
     NSData *thumbnailData;
     NSString *thumbnailUrl;
     NSString *description;
+    NSString *videoId;
 }
 
 @synthesize title;
 @synthesize thumbnailData;
 @synthesize thumbnailUrl;
 @synthesize description;
+@synthesize videoId;
 
 
 @end

@@ -54,10 +54,10 @@
     [searchText resignFirstResponder];
     NSString* query = searchText.text;
     
-    AFJSONRequestOperation* ope = [AFJSONRequestOperation JSONRequestOperationWithRequest:[client requestWithMethod:@"GET" path:@"/feeds/api/videos" parameters:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"v",query,@"q",@"json",@"alt",@"20",@"max-results", nil]] success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        Logging(@"entries are %@",[JSON objectForKey:@"feed"]);
-        id title = [[[[JSON objectForKey:@"feed"] objectForKey:@"entry"] objectAtIndex:0] objectForKey:@"title"];
-        Logging(@"First title is %@",[title objectForKey:@"$t"]);
+    AFJSONRequestOperation* ope = [AFJSONRequestOperation JSONRequestOperationWithRequest:[client requestWithMethod:@"GET" path:@"/feeds/api/videos" parameters:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"v",query,@"q",@"json",@"alt",@"50",@"max-results", nil]] success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
         Logging(@"%d items",[[[JSON objectForKey:@"feed"] objectForKey:@"entry"] count]);
         
         NSMutableArray* list = [NSMutableArray arrayWithCapacity:20];
@@ -71,11 +71,14 @@
         
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         Logging(@"%@",request.URL);
         Logging(@"Fail %@",error);
         ALERT(@"Network error.Please retry.");
     }];
-    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [ope start];
 }
 

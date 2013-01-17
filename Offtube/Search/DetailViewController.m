@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "TK2PlayerViewController.h"
+#import "Downloader.h"
 
 
 @interface DetailViewController ()
@@ -17,6 +19,7 @@
     __weak IBOutlet UILabel *titleLabel;
     __weak IBOutlet UILabel *descriptionLabel;
     __weak IBOutlet UIImageView *thumbnailImage;
+    BOOL onlySound;
     VideoData *_data;
     
 }
@@ -25,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        onlySound = NO;
     }
     return self;
 }
@@ -40,16 +43,21 @@
 
 - (IBAction)pushWatchByWeb:(id)sender
 {
+    NSString *url = [[Downloader sharedInstance] getPageURL:_data];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
     
 }
 
 - (IBAction)pushWatchOffline:(id)sender
 {
-    
+    onlySound = NO;
+    [self performSegueWithIdentifier:@"playOffline" sender:self];
 }
 
 - (IBAction)pushWatchOfflineOnlySound:(id)sender{
     
+    onlySound = YES;
+    [self performSegueWithIdentifier:@"playOffline" sender:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +71,15 @@
     _data = data;
     
     
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"playOffline"]) {
+        TK2PlayerViewController *viewController = (TK2PlayerViewController*)[segue destinationViewController];
+        viewController.data = _data;
+        viewController.onlySound = onlySound;
+    }
     
 }
 

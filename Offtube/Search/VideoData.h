@@ -15,6 +15,7 @@
 @property (strong,nonatomic) NSData *thumbnailData;
 @property (strong,nonatomic) NSString *thumbnailUrl;
 @property (strong,nonatomic) NSString * description;
+@property (strong,nonatomic) NSString *videoId;
 
 @end
 
@@ -22,6 +23,8 @@
 static VideoData* parseData(NSDictionary *dict){
     VideoData *data = [[VideoData alloc] init];
     
+    NSString *fullId = [[dict objectForKey:@"id"] objectForKey:@"$t"];
+    data.videoId = [[fullId componentsSeparatedByString:@":"] lastObject];
     data.title = [[dict objectForKey:@"title"] objectForKey:@"$t"];
     data.thumbnailUrl = [[[[dict objectForKey:@"media$group"] objectForKey:@"media$thumbnail"] objectAtIndex:0] objectForKey:@"url"];
     data.description = [[[dict objectForKey:@"media$group"] objectForKey:@"media$description"] objectForKey:@"$t"]; 

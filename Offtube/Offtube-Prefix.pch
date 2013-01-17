@@ -15,4 +15,8 @@
 
 #import "Misc.h"
 
-#define Logging(fmt,...) NSLog(fmt,__VA_ARGS__)
+#ifdef DEBUG
+  #define Logging(...) NSLog(__VA_ARGS__)
+#else
+  #define Logging(...)
+#endif

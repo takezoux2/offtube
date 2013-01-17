@@ -160,7 +160,6 @@
     Logging(@"Select at %d",indexPath.item);
     VideoData *data = [_results objectAtIndex:indexPath.item];
     
-    Logging(@"Dele %@",selectDelegete);
     [selectDelegete didSelectSearchResult:data];
     
 }

@@ -56,6 +56,13 @@
 		14AB718D16A69E1C0038A48B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB718C16A69E1C0038A48B /* CoreAudio.framework */; };
 		14AB719116A6BD400038A48B /* VideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB719016A6BD400038A48B /* VideoData.m */; };
 		14AB719416A6FF400038A48B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB719316A6FF400038A48B /* DetailViewController.m */; };
+		14AB71A016A7AC880038A48B /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB719F16A7AC880038A48B /* Downloader.m */; };
+		14AB71A316A7CCDB0038A48B /* TK2PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB71A216A7CCDB0038A48B /* TK2PlayerViewController.m */; };
+		14AB71A716A7DBFF0038A48B /* TK2AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AB71A616A7DBFF0038A48B /* TK2AVPlayerView.m */; };
+		14AB71A916A7DDF40038A48B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB71A816A7DDF40038A48B /* AVFoundation.framework */; };
+		14AB71AC16A7E88A0038A48B /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 14AB71AA16A7E88A0038A48B /* pause.png */; };
+		14AB71AD16A7E88A0038A48B /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 14AB71AB16A7E88A0038A48B /* play.png */; };
+		14AB71AF16A7EBB40038A48B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AB71AE16A7EBB40038A48B /* CoreMedia.framework */; };
 		994FC35F06824720B48FA08F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C19694619DA9458EABC2D244 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1455804016A84C9400D3F28E /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1455804116A84C9400D3F28E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1455804216A84C9400D3F28E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14AB70D216A68E500038A48B /* Offtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Offtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14AB70D616A68E500038A48B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14AB70D816A68E500038A48B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -157,6 +167,16 @@
 		14AB719016A6BD400038A48B /* VideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoData.m; path = Search/VideoData.m; sourceTree = "<group>"; };
 		14AB719216A6FF400038A48B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Search/DetailViewController.h; sourceTree = "<group>"; };
 		14AB719316A6FF400038A48B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Search/DetailViewController.m; sourceTree = "<group>"; };
+		14AB719E16A7AC880038A48B /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Downloader.h; path = Download/Downloader.h; sourceTree = "<group>"; };
+		14AB719F16A7AC880038A48B /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Downloader.m; path = Download/Downloader.m; sourceTree = "<group>"; };
+		14AB71A116A7CCDB0038A48B /* TK2PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TK2PlayerViewController.h; sourceTree = "<group>"; };
+		14AB71A216A7CCDB0038A48B /* TK2PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TK2PlayerViewController.m; sourceTree = "<group>"; };
+		14AB71A516A7DBFF0038A48B /* TK2AVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TK2AVPlayerView.h; path = Player/TK2AVPlayerView.h; sourceTree = "<group>"; };
+		14AB71A616A7DBFF0038A48B /* TK2AVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TK2AVPlayerView.m; path = Player/TK2AVPlayerView.m; sourceTree = "<group>"; };
+		14AB71A816A7DDF40038A48B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		14AB71AA16A7E88A0038A48B /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		14AB71AB16A7E88A0038A48B /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		14AB71AE16A7EBB40038A48B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C19694619DA9458EABC2D244 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97E2C07DE584565A6EAA8FB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -166,6 +186,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14AB71AF16A7EBB40038A48B /* CoreMedia.framework in Frameworks */,
+				14AB71A916A7DDF40038A48B /* AVFoundation.framework in Frameworks */,
 				14AB718D16A69E1C0038A48B /* CoreAudio.framework in Frameworks */,
 				14AB718B16A69E150038A48B /* AudioToolbox.framework in Frameworks */,
 				14AB70D716A68E500038A48B /* UIKit.framework in Frameworks */,
@@ -191,6 +213,8 @@
 		14AB70C716A68E500038A48B = {
 			isa = PBXGroup;
 			children = (
+				14AB71AE16A7EBB40038A48B /* CoreMedia.framework */,
+				14AB71A816A7DDF40038A48B /* AVFoundation.framework */,
 				14AB718C16A69E1C0038A48B /* CoreAudio.framework */,
 				14AB718A16A69E150038A48B /* AudioToolbox.framework */,
 				14AB70DC16A68E500038A48B /* Offtube */,
@@ -225,6 +249,8 @@
 		14AB70DC16A68E500038A48B /* Offtube */ = {
 			isa = PBXGroup;
 			children = (
+				14AB71A416A7DBCC0038A48B /* Player */,
+				14AB719C16A7AC5F0038A48B /* Download */,
 				14AB712D16A69BF70038A48B /* ANMovie */,
 				14AB712116A69B290038A48B /* Search */,
 				14AB70E516A68E500038A48B /* TK2AppDelegate.h */,
@@ -241,6 +267,8 @@
 		14AB70DD16A68E500038A48B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14AB71AA16A7E88A0038A48B /* pause.png */,
+				14AB71AB16A7E88A0038A48B /* play.png */,
 				14AB70DE16A68E500038A48B /* Offtube-Info.plist */,
 				14AB70DF16A68E500038A48B /* InfoPlist.strings */,
 				14AB70E216A68E500038A48B /* main.m */,
@@ -411,6 +439,26 @@
 			path = Streams;
 			sourceTree = "<group>";
 		};
+		14AB719C16A7AC5F0038A48B /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				14AB719E16A7AC880038A48B /* Downloader.h */,
+				14AB719F16A7AC880038A48B /* Downloader.m */,
+			);
+			name = Download;
+			sourceTree = "<group>";
+		};
+		14AB71A416A7DBCC0038A48B /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				14AB71A116A7CCDB0038A48B /* TK2PlayerViewController.h */,
+				14AB71A216A7CCDB0038A48B /* TK2PlayerViewController.m */,
+				14AB71A516A7DBFF0038A48B /* TK2AVPlayerView.h */,
+				14AB71A616A7DBFF0038A48B /* TK2AVPlayerView.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -467,6 +515,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = 14AB70C716A68E500038A48B;
 			productRefGroup = 14AB70D316A68E500038A48B /* Products */;
@@ -489,6 +538,8 @@
 				14AB70EB16A68E500038A48B /* Default@2x.png in Resources */,
 				14AB70ED16A68E500038A48B /* Default-568h@2x.png in Resources */,
 				14AB70F016A68E500038A48B /* MainStoryboard.storyboard in Resources */,
+				14AB71AC16A7E88A0038A48B /* pause.png in Resources */,
+				14AB71AD16A7E88A0038A48B /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +622,9 @@
 				14AB718916A69BF70038A48B /* ANMovieStoreFile.m in Sources */,
 				14AB719116A6BD400038A48B /* VideoData.m in Sources */,
 				14AB719416A6FF400038A48B /* DetailViewController.m in Sources */,
+				14AB71A016A7AC880038A48B /* Downloader.m in Sources */,
+				14AB71A316A7CCDB0038A48B /* TK2PlayerViewController.m in Sources */,
+				14AB71A716A7DBFF0038A48B /* TK2AVPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +651,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				14AB70E016A68E500038A48B /* en */,
+				1455804116A84C9400D3F28E /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -605,6 +660,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				14AB70EF16A68E500038A48B /* en */,
+				1455804016A84C9400D3F28E /* ja */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -613,6 +669,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				14AB710416A68E500038A48B /* en */,
+				1455804216A84C9400D3F28E /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -673,11 +730,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C97E2C07DE584565A6EAA8FB /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yoshiteru Takeshita (UWD5N7QPAU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yoshiteru Takeshita (UWD5N7QPAU)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Offtube/Offtube-Prefix.pch";
 				INFOPLIST_FILE = "Offtube/Offtube-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8008BF8A-3AF2-4FC3-8F29-6333937F4CB4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8008BF8A-3AF2-4FC3-8F29-6333937F4CB4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -686,11 +747,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C97E2C07DE584565A6EAA8FB /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yoshiteru Takeshita (UWD5N7QPAU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yoshiteru Takeshita (UWD5N7QPAU)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Offtube/Offtube-Prefix.pch";
 				INFOPLIST_FILE = "Offtube/Offtube-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8008BF8A-3AF2-4FC3-8F29-6333937F4CB4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8008BF8A-3AF2-4FC3-8F29-6333937F4CB4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

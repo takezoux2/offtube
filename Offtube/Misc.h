@@ -15,7 +15,7 @@ message:msg \
 delegate:self \
 cancelButtonTitle:nil \
 otherButtonTitles:@"OK", nil]; \
-[alert show];
+[alert show]
 
 
 

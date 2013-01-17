@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Search-->
+        <!--View Controller - 検索-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="TK2ViewController" sceneMemberID="viewController">
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="73" id="pJn-sn-2hI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Search">
+                                <state key="normal" title="探す">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -44,7 +44,7 @@
                             <constraint firstItem="y0M-4c-oOk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="9" id="ou6-9O-HiD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="tCE-Ga-aE2"/>
+                    <navigationItem key="navigationItem" title="検索" id="tCE-Ga-aE2"/>
                     <connections>
                         <outlet property="searchText" destination="y0M-4c-oOk" id="iIx-1D-yc1"/>
                         <segue destination="ojA-j2-FGs" kind="push" identifier="detail" id="QNV-7p-OcR"/>
@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="width" constant="145" id="vlX-SL-Gig"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="View in Safari">
+                                <state key="normal" title="Safariで見る">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -83,7 +83,7 @@
                                     <constraint firstAttribute="width" constant="145" id="weT-2Z-xqj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="OfflineMode">
+                                <state key="normal" title="Offlineモード">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -99,7 +99,7 @@
                                     <constraint firstAttribute="width" constant="145" id="0Zg-z9-a6b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Offline(sound only)">
+                                <state key="normal" title="Offline(音声のみ)">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -159,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="1102" y="-126"/>
         </scene>
-        <!--Player View Controller - Play-->
+        <!--Player View Controller - 再生-->
         <scene sceneID="ctx-b0-uEv">
             <objects>
                 <viewController id="cjt-6A-PgO" customClass="TK2PlayerViewController" sceneMemberID="viewController">
@@ -235,7 +235,7 @@
                             <constraint firstItem="rWg-T9-n8f" firstAttribute="leading" secondItem="JLa-5B-dK1" secondAttribute="leading" constant="61" id="yv9-mU-qTF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Play" id="wJf-FA-D4M"/>
+                    <navigationItem key="navigationItem" title="再生" id="wJf-FA-D4M"/>
                     <connections>
                         <outlet property="currentPlayTimeLabel" destination="eln-4c-FA9" id="cJ4-cs-jp6"/>
                         <outlet property="playButton" destination="mTQ-4L-VNs" id="2pO-Tt-jJH"/>
@@ -269,6 +269,32 @@
     <resources>
         <image name="play.png" width="40" height="40"/>
     </resources>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushWatchByWeb:"/>
+                <relationship kind="action" name="pushWatchOffline:"/>
+                <relationship kind="action" name="pushWatchOfflineOnlySound:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TK2PlayerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TK2PlayerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushPlay:"/>
+                <relationship kind="action" name="slidePlayTime:"/>
+            </relationships>
+        </class>
+        <class className="TK2ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TK2ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushSearch:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
